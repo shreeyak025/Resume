@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniConnect | University Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loginView" class="login-layout">
+    <section class="welcome-panel">
+      <div class="brand"><span class="brand-mark">U</span><span>UniConnect</span></div>
+      <div class="welcome-copy">
+        <p class="eyebrow">YOUR CAMPUS, CONNECTED</p>
+        <h1>Learning is a journey.<br><em>Let's make it simpler.</em></h1>
+        <p class="welcome-text">One secure place for courses, attendance, academic results and campus updates.</p>
+      </div>
+      <div class="welcome-footer">A smarter way to experience university.</div>
+        <div class="decor decor-one"></div><div class="decor decor-two"></div>
+    </section>
+    <main class="login-panel">
+      <div class="mobile-brand brand"><span class="brand-mark">U</span><span>UniConnect</span></div>
+      <div class="login-card">
+        <p class="eyebrow">UNIVERSITY PORTAL</p>
+        <h2>Welcome back</h2><p class="muted">Choose your account type to continue.</p>
+        <div class="role-picker" role="group" aria-label="Account type">
+          <button class="role active" data-role="student"><span>♙</span>Student</button>
+          <button class="role" data-role="teacher"><span>▤</span>Teacher</button>
+          <button class="role" data-role="admin"><span>⚙</span>Admin</button>
+        </div>
+        <form id="loginForm">
+          <label for="email">University email</label>
+          <input id="email" type="email" placeholder="you@uniconnect.edu" required>
+          <label for="password">Password</label>
+          <div class="password-wrap"><input id="password" type="password" placeholder="Enter your password" required><button id="togglePassword" type="button" class="show-password">Show</button></div>
+          <div class="form-meta"><label class="remember"><input type="checkbox" checked> Remember me</label><span class="muted tiny">Demo portal</span></div>
+          <button class="primary-btn" type="submit">Sign in <span>→</span></button>
+          <p id="loginMessage" class="message" aria-live="polite"></p>
+        </form>
+        <div class="demo-hint"><strong>Demo access</strong><p id="demoHint">student@uniconnect.edu · demo123</p><button type="button" id="fillDemo">Use demo credentials</button></div>
+      </div>
+      <p class="copyright">© 2026 UniConnect University Portal · Student project demo</p>
+    </main>
+  </div>
+
+  <div id="appView" class="app-layout hidden">
+    <aside class="sidebar">
+      <div class="brand side-brand"><span class="brand-mark">U</span><span>UniConnect</span></div>
+      <p class="nav-caption">WORKSPACE</p><nav id="sideNav"></nav>
+      <div class="sidebar-bottom"><div class="help-icon">?</div><div><strong>Need help?</strong><p>Contact campus support</p></div></div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar"><div><p class="breadcrumb">Workspace / <span id="roleLabel">Student</span></p><h2 id="pageHeading">Overview</h2></div><div class="top-actions"><button class="icon-btn" aria-label="Notifications">♧<i></i></button><div class="user-chip"><div class="avatar" id="avatar">AS</div><div><strong id="userName">Aarav Sharma</strong><small id="userRole">Student</small></div></div><button id="logoutBtn" class="logout-btn">Log out</button></div></header>
+      <section class="content-area">
+        <div class="greeting-row"><div><p class="eyebrow" id="todayLabel">YOUR CAMPUS AT A GLANCE</p><h1 id="greeting">Good morning, Aarav 👋</h1><p class="muted" id="greetingSub">Here’s what’s happening with your studies today.</p></div><div class="date-pill">▦ <span id="todayDate"></span></div></div>
+        <div id="statsGrid" class="stats-grid"></div>
+        <div class="section-heading"><div><h3 id="listHeading">Your courses</h3><p class="muted">A quick look at your latest updates</p></div><button class="text-btn" id="viewAllBtn">View all →</button></div>
+        <div id="itemsList" class="items-list"></div>
+        <div class="quick-links" id="quickLinks"></div>
+        <p class="demo-note">This is a sample project dashboard. Academic records shown here are demonstration data, not real student records.</p>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body></html>
